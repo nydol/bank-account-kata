@@ -1,10 +1,11 @@
 package fr.bank.account.domain;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class BankTest {
 
@@ -18,7 +19,7 @@ public class BankTest {
 
         Amount actual = bank.deposit(account, 5400L);
 
-        Assertions.assertThat(actual.toLong()).isEqualTo(70000L);
+        assertThat(actual.toLong()).isEqualTo(70000L);
     }
 
     @Test
@@ -29,7 +30,7 @@ public class BankTest {
 
         Amount actual = bank.withdraw(account, 5400L);
 
-        Assertions.assertThat(actual.toLong()).isEqualTo(60000L);
+        assertThat(actual.toLong()).isEqualTo(60000L);
     }
 
 }
