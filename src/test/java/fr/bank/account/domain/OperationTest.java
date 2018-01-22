@@ -12,7 +12,7 @@ public class OperationTest {
     private static final ZonedDateTime ZONED_DATE_TIME = ZonedDateTime.of(2017, 11, 27, 22, 9, 1, 0, ZoneId.of("Europe/Paris"));
 
     @Test
-    public void test_deposit() throws Exception {
+    public void deposit() {
         Amount balance = Amount.valueOf(200000L);
 
         Operation actual = Operation.deposit(ZONED_DATE_TIME, Amount.valueOf(54700L));
@@ -22,7 +22,7 @@ public class OperationTest {
     }
 
     @Test
-    public void test_withdrawal() throws Exception {
+    public void withdrawal() {
         Amount balance = Amount.valueOf(200000L);
 
         Operation actual = Operation.withdrawal(ZONED_DATE_TIME, Amount.valueOf(57000L));

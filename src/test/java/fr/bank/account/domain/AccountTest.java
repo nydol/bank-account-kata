@@ -12,14 +12,14 @@ public class AccountTest {
     private static final ZonedDateTime ZONED_DATE_TIME = ZonedDateTime.of(2017, 11, 27, 22, 9, 1, 0, ZoneId.of("Europe/Paris"));
 
     @Test
-    public void test_createAccount() throws Exception {
+    public void createAccount() {
         Account account = Account.createAccount(42600L);
 
         assertThat(account.toString()).isEqualTo("Balance = 42600\nOperations : \n");
     }
 
     @Test
-    public void test_addOperation() throws Exception {
+    public void addOperation() {
         Account account = Account.createAccount(42600L);
         ZonedDateTime depositDate = ZONED_DATE_TIME.plusHours(1);
         ZonedDateTime withdrawDate = ZONED_DATE_TIME.plusHours(2);
